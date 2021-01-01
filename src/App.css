@@ -1,38 +1,86 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+    --bg-dark: #2b2b2b;
+    --bg-light: #ffffff;
+    --font-family-viaodalibre: "Viaoda Libre", serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.my-body{
+    
+    /* overflow-x: hidden; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a {
+    text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.bg-dark {
+    background: var(--bg-dark);
+}
+.bg-light {
+    background: var(--bg-light);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sec-container {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+}
+
+.dark-btn {
+    background: #000;
+    cursor: pointer;
+    border-radius: 50px;
+    border: 0;
+    color: white;
+    width: 290px;
+    height: 66px;
+    font-size: 30px;
+    padding: 0 30px;
+    box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.712);
+    transition: 0.5s;
+}
+
+.btn-hover:hover {
+    transform: translateY(-8px);
+    transition: 0.5s;
+    box-shadow: 2px 4px 10px 5px rgba(0, 0, 0, 0.747);
+}
+.light-btn {
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 50px;
+    border: 0;
+    color: rgb(5, 5, 5);
+    width: 290px;
+    height: 66px;
+    font-size: 30px;
+    padding: 0 30px;
+    box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.712);
+    transition: 0.5s;
+}
+
+.dark-btn:focus,
+.light-btn:focus {
+    outline: 0;
+}
+
+@media (max-width: 1144px) {
+    .sec-container {
+        width: 75%;
+    }
 }

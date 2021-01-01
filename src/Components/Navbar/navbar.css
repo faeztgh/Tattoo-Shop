@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+
+.navbar {
+    background: #2b2b2b;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.35));
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.container {
+    z-index: 1;
+    width: 100%;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+    position: relative;
+}
+
+.navbar-logo {
+    color: #fff;
+    justify-self: start;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.navbar-icon {
+    margin-right: 0.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    text-align: center;
+    justify-content: flex-end;
+    font-family: var(--font-family-viaodalibre);
+}
+
+.nav-item {
+    height: 80px;
+    border-bottom: 2px solid transparent;
+    margin: 0 20px;
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid #f00946;
+}
+
+.nav-links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 100%;
+}
+
+.nav-links:hover {
+    color: #d73131;
+}
+.fa-bars {
+    color: #fff;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .NavbarItems {
+        position: relative;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 95vh;
+
+        position: absolute;
+        top: 78px;
+        right: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s ease;
+        justify-content: space-evenly;
+        pointer-events: none;
+        align-items: center;
+    }
+
+   
+    .nav-menu.active {
+        background: #2b2b2b;
+        width: 100%;
+        height: 95vh;
+        right: 0px;
+        opacity: 1;
+        /* transition: all 0.8s ease; */
+        visibility: visible;
+        z-index: 1;
+        pointer-events: visible;
+        position: fixed;
+        top: 78px;
+        overflow-y: hidden;
+
+    }
+
+   
+
+    body.active{
+        position: relative;
+        overflow-x: visible;
+        /* top: 0; */
+       
+    }
+
+    .nav-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+        font-size: 1.8em;
+        letter-spacing: 0.3em;
+    }
+
+    .nav-links:hover {
+        color: #f00946;
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+
+    .nav-item:hover {
+        border: none;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        top: -15px;
+        left: 0;
+        transform: translate(25%, 50%);
+        font-size: 1.5rem;
+        transition: 1s;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        cursor: pointer;
+        color: #fff;
+        letter-spacing: 0.3em;
+        font-size: 1em;
+    }
+
+    .fa-times {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .nav-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 120px;
+    }
+}

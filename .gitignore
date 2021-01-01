@@ -14,7 +14,7 @@
 */assets
 src/assets
 src/Data
-Style
+Styles.js
 manifest.json
 # misc
 .DS_Store
